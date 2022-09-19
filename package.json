@@ -1,0 +1,38 @@
+{
+  "name": "jmehlsocial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jmehler@bitbucket.org/jmehler/jmehlsocial.git"
+  },
+  "author": "Joe Mehler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/jmehler/jmehlsocial/issues"
+  },
+  "homepage": "https://bitbucket.org/jmehler/jmehlsocial#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "normalize-url": "^4.5.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  }
+}
